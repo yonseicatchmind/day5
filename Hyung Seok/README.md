@@ -45,11 +45,11 @@ public class SampleController implements Initializable {
 
     
 
-	 public GraphicsContext gcb, gcf; // canvas¿¡ »ö Ãâ·Â  gcf-canvas gcb-canvasef 
+	 public GraphicsContext gcb, gcf; // canvasì— ìƒ‰ ì¶œë ¥  gcf-canvas gcb-canvasef 
 
 	 public boolean freedesign = true, erase = false, drawline = false,
 
-			 drawoval = false,drawrectangle = false, fill = false; //true false·Î Å°°í ²ô±â
+			 drawoval = false,drawrectangle = false, fill = false; //true falseë¡œ í‚¤ê³  ë„ê¸°
 
 	 double startX=0, startY=0, lastX=0,lastY=0,oldX=0,oldY=0,holdX=0,holdY=0;
 
@@ -75,7 +75,7 @@ public class SampleController implements Initializable {
 
 	 double sliders=5,rsliders;
 
-	//Color.rgb(244,244,244); // ±×¸²ÆÇ ¹è°æ »ö 
+	//Color.rgb(244,244,244); // ê·¸ë¦¼íŒ ë°°ê²½ ìƒ‰ 
 
 	 
 
@@ -127,7 +127,7 @@ public class SampleController implements Initializable {
 
 	@FXML
 
-		public void onMousePressedListener(MouseEvent e){ //Á÷¼± ¹× µµÇü ±×¸± ¶§ ½ÃÀÛ ³¡ ÀúÀå 
+		public void onMousePressedListener(MouseEvent e){ //ì§ì„  ë° ë„í˜• ê·¸ë¦´ ë•Œ ì‹œì‘ ë ì €ì¥ 
 
 			this.startX = e.getX();
 
@@ -137,13 +137,13 @@ public class SampleController implements Initializable {
 
 	 @FXML
 
-	    public void onMouseDraggedListener(MouseEvent e){ // ¸¶¿ì½º ¿òÁ÷ÀÓ ÀúÀå
+	    public void onMouseDraggedListener(MouseEvent e){ // ë§ˆìš°ìŠ¤ ì›€ì§ì„ ì €ì¥
 
 	        this.lastX = e.getX();
 
 	        this.lastY = e.getY();
 
-	        	// µå·¡±× ÇÒ ¶§ ÇÔ¼öµé È£Ãâ ¹× ¾Ë°í¸®Áò 
+	        	// ë“œë˜ê·¸ í•  ë•Œ í•¨ìˆ˜ë“¤ í˜¸ì¶œ ë° ì•Œê³ ë¦¬ì¦˜ 
 
 	     if (Ids.equals("teacher")) {
 
@@ -227,7 +227,7 @@ public class SampleController implements Initializable {
 
 	    public void onMouseExitedListener(MouseEvent event)
 
-	    { //½ÇÇè
+	    { //ì‹¤í—˜
 
 //	        System.out.println("mouse exited");
 
@@ -239,7 +239,7 @@ public class SampleController implements Initializable {
 
 	
 
-	  public void sendPensil() // ¸¶¿ì½º ÀÌ¿ë ±×¸®±â  ¸Ş¼Òµå 
+	  public void sendPensil() // ë§ˆìš°ìŠ¤ ì´ìš© ê·¸ë¦¬ê¸°  ë©”ì†Œë“œ 
 
 	    {
 
@@ -276,7 +276,7 @@ public class SampleController implements Initializable {
 	  public void sendfill(MouseEvent e) {
 		send("Fill:"+true);}
 
-	    private void sendRect() //»ç°¢Çü ±×¸®´Â ¸Ş¼Òµå 
+	    private void sendRect() //ì‚¬ê°í˜• ê·¸ë¦¬ëŠ” ë©”ì†Œë“œ 
 
 	    {
 
@@ -302,7 +302,7 @@ public class SampleController implements Initializable {
 
 
 
-	    private void sendLine() //¼± ±×¸®´Â ¸Ş¼Òµå 
+	    private void sendLine() //ì„  ê·¸ë¦¬ëŠ” ë©”ì†Œë“œ 
 
 	    {	
 
@@ -330,7 +330,7 @@ public class SampleController implements Initializable {
 
 	
 
-	  	private void sendOval() //Å¸¿ø ±×¸®´Â ¸Ş¼Òµå 
+	  	private void sendOval() //íƒ€ì› ê·¸ë¦¬ëŠ” ë©”ì†Œë“œ 
 
 	    {
 
@@ -386,7 +386,7 @@ public class SampleController implements Initializable {
 
 	  	 
 
-	  	 public void drawPencil() // ¸¶¿ì½º ÀÌ¿ë ±×¸®±â  ¸Ş¼Òµå 
+	  	 public void drawPencil() // ë§ˆìš°ìŠ¤ ì´ìš© ê·¸ë¦¬ê¸°  ë©”ì†Œë“œ 
 
 		    {
 
@@ -404,7 +404,7 @@ public class SampleController implements Initializable {
 
 		    } 
 
-	  	 public void drawErase() // ¸¶¿ì½º ÀÌ¿ë ±×¸®±â  ¸Ş¼Òµå 
+	  	 public void drawErase() // ë§ˆìš°ìŠ¤ ì´ìš© ê·¸ë¦¬ê¸°  ë©”ì†Œë“œ 
 
 		    {
 
@@ -422,7 +422,7 @@ public class SampleController implements Initializable {
 
 		    } 
 
-	    private void drawRect() //»ç°¢Çü ±×¸®´Â ¸Ş¼Òµå 
+	    private void drawRect() //ì‚¬ê°í˜• ê·¸ë¦¬ëŠ” ë©”ì†Œë“œ 
 
 	    {
 
@@ -461,7 +461,7 @@ public class SampleController implements Initializable {
 
 
 
-	    private void drawLine() //¼± ±×¸®´Â ¸Ş¼Òµå 
+	    private void drawLine() //ì„  ê·¸ë¦¬ëŠ” ë©”ì†Œë“œ 
 
 	    {	
 
@@ -481,7 +481,7 @@ public class SampleController implements Initializable {
 
 	    
 
-	    private void drawOval() //Å¸¿ø ±×¸®´Â ¸Ş¼Òµå 
+	    private void drawOval() //íƒ€ì› ê·¸ë¦¬ëŠ” ë©”ì†Œë“œ 
 
 	    {
 
@@ -559,7 +559,7 @@ public class SampleController implements Initializable {
 
 	    
 
-	     // µµÇü ±×¸± ¶§ È¿°ú 
+	     // ë„í˜• ê·¸ë¦´ ë•Œ íš¨ê³¼ 
 
 	    
 
@@ -855,15 +855,15 @@ public class SampleController implements Initializable {
 
 	                
 
-	                //Talk.setText("[¾Ë¸²] "+ Ids +" ´ÔÀÌ  ÀÔÀåÇÏ¿´½À´Ï´Ù!!\n");
+	                //Talk.setText("[ì•Œë¦¼] "+ Ids +" ë‹˜ì´  ì…ì¥í•˜ì˜€ìŠµë‹ˆë‹¤!!\n");
 
-	                TalkBoard.appendText("<¾Ë¸²> "+ Ids +" ´ÔÀÌ  ÀÔÀå ÇÏ¿´½À´Ï´Ù!!\n");
+	                TalkBoard.appendText("<ì•Œë¦¼> "+ Ids +" ë‹˜ì´  ì…ì¥ í•˜ì˜€ìŠµë‹ˆë‹¤!!\n");
 
 	                //Send.onActionProperty();
 
 	                //Send.fire();
 
-	                send("<¾Ë¸²> "+ Ids +" ´ÔÀÌ  ÀÔÀå ÇÏ¿´½À´Ï´Ù!!\n");
+	                send("<ì•Œë¦¼> "+ Ids +" ë‹˜ì´  ì…ì¥ í•˜ì˜€ìŠµë‹ˆë‹¤!!\n");
 
 	                
 
@@ -900,7 +900,7 @@ public class SampleController implements Initializable {
 
 	                stopClient();
 
-	                TalkBoard.appendText("<¾Ë¸²> "+ Ids +" ´ÔÀÌ  ÅğÀå ÇÏ¿´½À´Ï´Ù!!\n");
+	                TalkBoard.appendText("<ì•Œë¦¼> "+ Ids +" ë‹˜ì´  í‡´ì¥ í•˜ì˜€ìŠµë‹ˆë‹¤!!\n");
 
 	                Login.setDisable(false);
 
@@ -914,7 +914,7 @@ public class SampleController implements Initializable {
 
 		 
 
-		 //send("[¾Ë¸²] "+ Ids +" ´ÔÀÌ  ÀÔÀå ÇÏ¿´½À´Ï´Ù!!\n");
+		 //send("[ì•Œë¦¼] "+ Ids +" ë‹˜ì´  ì…ì¥ í•˜ì˜€ìŠµë‹ˆë‹¤!!\n");
 
 	    }
 
@@ -956,7 +956,7 @@ public class SampleController implements Initializable {
 
 				
 
-			TalkBoard.appendText("<¾Ë¸²> "+ Ids +" ´ÔÀÌ  ÅğÀåÇÏ¿´½À´Ï´Ù!!\n");
+			TalkBoard.appendText("<ì•Œë¦¼> "+ Ids +" ë‹˜ì´  í‡´ì¥í•˜ì˜€ìŠµë‹ˆë‹¤!!\n");
 
 			Talk.setText("");
 
@@ -1243,9 +1243,9 @@ public class SampleController implements Initializable {
 
 		                        stopClient();
 
-		                        TalkBoard.appendText("[¼­¹ö Á¢¼Ó ½ÇÆĞ]\n");
+		                        TalkBoard.appendText("[ì„œë²„ ì ‘ì† ì‹¤íŒ¨]\n");
 
-		                        Platform.exit();// ÇÁ·Î±×·¥ Á¾·á
+		                        Platform.exit();// í”„ë¡œê·¸ë¨ ì¢…ë£Œ
 
 		                    }
 
@@ -1263,7 +1263,7 @@ public class SampleController implements Initializable {
 
 		 
 
-		    // Å¬¶óÀÌ¾ğÆ® Á¾·á ¸Ş¼Òµå
+		    // í´ë¼ì´ì–¸íŠ¸ ì¢…ë£Œ ë©”ì†Œë“œ
 
 		    public void stopClient() {
 
@@ -1285,7 +1285,7 @@ public class SampleController implements Initializable {
 
 		 
 
-		    // ¼­¹ö·ÎºÎÅÍ ¸Ş¼¼Áö¸¦ Àü´Ş¹Ş´Â ¸Ş¼Òµå
+		    // ì„œë²„ë¡œë¶€í„° ë©”ì„¸ì§€ë¥¼ ì „ë‹¬ë°›ëŠ” ë©”ì†Œë“œ
 
 		    public void receive() {
 
@@ -1349,7 +1349,7 @@ public class SampleController implements Initializable {
 
 		 
 
-		    // ¼­¹ö·Î ¸Ş¼¼Áö¸¦ º¸³»´Â ¸Ş¼Òµå
+		    // ì„œë²„ë¡œ ë©”ì„¸ì§€ë¥¼ ë³´ë‚´ëŠ” ë©”ì†Œë“œ
 
 		    public void send(String message) {
 
@@ -1385,7 +1385,7 @@ public class SampleController implements Initializable {
 
 		 
 
-		    // µ¿ÀÛ ¸Ş¼Òµå
+		    // ë™ì‘ ë©”ì†Œë“œ
 
 		  
 
@@ -1437,7 +1437,7 @@ Sample.fxml
 
       <ListView fx:id="PlayerList" layoutX="26.0" layoutY="380.0" prefHeight="397.0" prefWidth="197.0" />
 
-      <Label layoutX="26.0" layoutY="331.0" prefHeight="43.0" prefWidth="197.0" text="Á¢¼ÓÀÚ" textOverrun="CLIP" />
+      <Label layoutX="26.0" layoutY="331.0" prefHeight="43.0" prefWidth="197.0" text="ì ‘ì†ì" textOverrun="CLIP" />
 
       <Rectangle arcWidth="5.0" blendMode="ADD" fill="WHITE" height="237.0" layoutX="27.0" layoutY="76.0" smooth="false" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeMiterLimit="0.0" strokeType="INSIDE" width="197.0">
 
@@ -1463,7 +1463,7 @@ Sample.fxml
 
                     <items>
 
-                      <Button fx:id="Pencil" mnemonicParsing="false" onAction="#setFreeDesign" text="¿¬ÇÊ">
+                      <Button fx:id="Pencil" mnemonicParsing="false" onAction="#setFreeDesign" text="ì—°í•„">
 
                            <font>
 
@@ -1473,15 +1473,15 @@ Sample.fxml
 
                         </Button>
 
-                        <Button fx:id="oval" mnemonicParsing="false" onAction="#setOvalAsCurrentShape" text="Å¸¿ø" />
+                        <Button fx:id="oval" mnemonicParsing="false" onAction="#setOvalAsCurrentShape" text="íƒ€ì›" />
 
-                        <Button fx:id="line" mnemonicParsing="false" onAction="#setLineAsCurrentShape" text="Á÷¼±" />
+                        <Button fx:id="line" mnemonicParsing="false" onAction="#setLineAsCurrentShape" text="ì§ì„ " />
 
-                        <Button fx:id="rect" mnemonicParsing="false" onAction="#setRectangleAsCurrentShape" text="Á÷»ç°¢Çü" />
+                        <Button fx:id="rect" mnemonicParsing="false" onAction="#setRectangleAsCurrentShape" text="ì§ì‚¬ê°í˜•" />
 
-                        <Button fx:id="Eraser" mnemonicParsing="false" onAction="#setErase" text="Áö¿ì°³" />
+                        <Button fx:id="Eraser" mnemonicParsing="false" onAction="#setErase" text="ì§€ìš°ê°œ" />
 
-                        <Button fx:id="Clear" mnemonicParsing="false" onAction="#clearCanvas" text="ÃÊ±âÈ­" />
+                        <Button fx:id="Clear" mnemonicParsing="false" onAction="#clearCanvas" text="ì´ˆê¸°í™”" />
 
                         <RadioButton fx:id="fillRB" mnemonicParsing="false" onMouseClicked="#sendfill" text="Fill" />
 
@@ -1503,25 +1503,25 @@ Sample.fxml
 
       </Pane>
 
-      <Label layoutX="40.0" layoutY="94.0" text="´ëÈ­¸í" />
+      <Label layoutX="40.0" layoutY="94.0" text="ëŒ€í™”ëª…" />
 
       <TextField fx:id="ID" layoutX="94.0" layoutY="89.0" onAction="#inputID" prefHeight="28.0" prefWidth="124.0" />
 
-      <Button fx:id="Send" layoutX="1040.0" layoutY="749.0" mnemonicParsing="false" onAction="#InputChat" prefHeight="29.0" prefWidth="92.0" text="Àü ¼Û" />
+      <Button fx:id="Send" layoutX="1040.0" layoutY="749.0" mnemonicParsing="false" onAction="#InputChat" prefHeight="29.0" prefWidth="92.0" text="ì „ ì†¡" />
 
-      <Label layoutX="248.0" layoutY="502.0" text="´ë È­ Ã¢" />
+      <Label layoutX="248.0" layoutY="502.0" text="ëŒ€ í™” ì°½" />
 
-      <Button fx:id="EndConnect" layoutX="41.0" layoutY="268.0" mnemonicParsing="false" onAction="#endConnect" prefHeight="29.0" prefWidth="171.0" text="Á¢¼Ó Á¾·á" />
+      <Button fx:id="EndConnect" layoutX="41.0" layoutY="268.0" mnemonicParsing="false" onAction="#endConnect" prefHeight="29.0" prefWidth="171.0" text="ì ‘ì† ì¢…ë£Œ" />
 
-      <Label layoutX="38.0" layoutY="135.0" text="IP ÁÖ¼Ò" />
+      <Label layoutX="38.0" layoutY="135.0" text="IP ì£¼ì†Œ" />
 
       <TextField fx:id="IP" layoutX="94.0" layoutY="130.0" onAction="#inputID" prefHeight="28.0" prefWidth="124.0" promptText="127.0.0.1" />
 
       <TextField fx:id="Port" layoutX="94.0" layoutY="173.0" onAction="#inputID" prefHeight="28.0" prefWidth="124.0" promptText="1010" />
 
-      <Label layoutX="39.0" layoutY="178.0" text="Æ÷ Æ®" />
+      <Label layoutX="39.0" layoutY="178.0" text="í¬ íŠ¸" />
 
-      <Button fx:id="Login" layoutX="41.0" layoutY="228.0" mnemonicParsing="false" onAction="#inputID" prefHeight="29.0" prefWidth="171.0" text="·Î ±× ÀÎ" />
+      <Button fx:id="Login" layoutX="41.0" layoutY="228.0" mnemonicParsing="false" onAction="#inputID" prefHeight="29.0" prefWidth="171.0" text="ë¡œ ê·¸ ì¸" />
 
    </children>
 
